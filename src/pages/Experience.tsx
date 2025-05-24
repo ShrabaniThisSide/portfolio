@@ -113,7 +113,7 @@ const Experience = () => {
           animate="show"
           className="space-y-4 sm:space-y-6"
         >
-          {experiences.map((exp, index) => (
+          {experiences.map((exp) => (
             <motion.div
               key={exp.company}
               variants={item}
