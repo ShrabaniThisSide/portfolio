@@ -23,7 +23,9 @@ jobs:
           cache: 'npm'
 
       - name: Install Dependencies
-        run: npm install
+        run: |
+          npm install
+          npm install terser --save-dev
 
       - name: Build
         run: npm run build
