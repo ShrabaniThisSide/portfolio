@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Disclosure } from '@headlessui/react';
 import { HiChevronDown } from 'react-icons/hi';

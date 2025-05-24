@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { FaGraduationCap } from 'react-icons/fa';
 import Lottie from 'lottie-react';

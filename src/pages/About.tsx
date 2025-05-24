@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import profileImage from '../assets/shrabani-profile.jpg';
 
@@ -192,7 +191,7 @@ const About = () => {
           </motion.div>
 
           {/* Add responsive padding for mobile */}
-          <style jsx>{`
+          <style>{`
             @media (max-width: 1024px) {
               .grid {
                 padding: 0 1rem;

@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { HiDownload, HiEye, HiDocumentText } from 'react-icons/hi';
-import Lottie from 'lottie-react';
 import resumeCV from '../assets/Shrabani_CV.pdf';
 
 const Resume = () => {

@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { HiExternalLink } from 'react-icons/hi';
 import newsBackground from '../assets/news.jpg';
@@ -7,17 +6,17 @@ const Articles = () => {
   const articles = [
     {
       title: "Switch off- The New Indian Express",
-      description: "Many professionals are complaining about burnout, loss of sleep and excessive use of screens which has taken a massive toll on their physical and mental health. Here’s how some companies are dealing with digital fatigueAs work from home came to be called as the new normal, people across the globe were pushed to embrace a digital transformation.",
+      description: "Many professionals are complaining about burnout, loss of sleep and excessive use of screens which has taken a massive toll on their physical and mental health. Here's how some companies are dealing with digital fatigue. As work from home came to be called as the new normal, people across the globe were pushed to embrace a digital transformation.",
       link: "https://www.newindianexpress.com/cities/bengaluru/2022/may/09/switch-off-2451657.html"
     },
     {
       title: "Portion of Mylasandra lake makes way for road widening",
-      description: "As many lakes in the city die a slow death due to neglect, one is being eaten away by an infrastructure project. A portion of the Mylasandra lake on Dr. Vishnuvardhan Road, connecting Kengeri to Uttarahalli, is being used for widening the road by the Bruhat Bengaluru Mahanagara Palike (BBMP). Locals and residents of Mylasandra aired their concerns. A member of the Save Mylasandra Lake team, Ajay Kumar H.M., said, “Our team tried for an MoU for the development of the lake.",
+      description: "As many lakes in the city die a slow death due to neglect, one is being eaten away by an infrastructure project. A portion of the Mylasandra lake on Dr. Vishnuvardhan Road, connecting Kengeri to Uttarahalli, is being used for widening the road by the Bruhat Bengaluru Mahanagara Palike (BBMP). Locals and residents of Mylasandra aired their concerns.",
       link: "https://www.thehindu.com/news/national/karnataka/portion-of-mylasandra-lake-makes-way-for-road-widening/article65320939.ece"
     },
     {
       title: "The pandemic took a huge toll on us",
-      description: "The last two years were especially difficult for parents of differently-abled children. COVID-induced lockdowns brought to the fore countless challenges, and adversely affected children with Autism Spectrum Disorder (ASD) and their caregivers with the closure of schools, parks, discontinuation of therapy. “Most parents found it exhausting meeting their children’s needs alone at home and keeping them occupied.",
+      description: "The last two years were especially difficult for parents of differently-abled children. COVID-induced lockdowns brought to the fore countless challenges, and adversely affected children with Autism Spectrum Disorder (ASD) and their caregivers with the closure of schools, parks, discontinuation of therapy.",
       link: "https://www.thehindu.com/news/national/karnataka/the-pandemic-took-a-huge-toll-on-us/article65282774.ece"
     }
   ];
@@ -61,9 +60,6 @@ const Articles = () => {
                   <h2 className="text-2xl font-bold text-primary dark:text-white font-serif">
                     {article.title}
                   </h2>
-                  <span className="text-sm text-accent mt-2 md:mt-0 font-serif">
-                    {article.date}
-                  </span>
                 </div>
                 <p className="text-gray-600 dark:text-gray-300 mb-4 font-serif leading-relaxed">
                   {article.description}

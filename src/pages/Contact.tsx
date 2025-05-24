@@ -1,4 +1,4 @@
-import React, { useState, FormEvent, ChangeEvent } from 'react';
+import { useState, FormEvent, ChangeEvent } from 'react';
 import { motion } from 'framer-motion';
 import { FaLinkedin, FaInstagram } from 'react-icons/fa';
 import { HiMail } from 'react-icons/hi';
