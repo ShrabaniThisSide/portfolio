@@ -15,6 +15,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+        with:
+          persist-credentials: false
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
@@ -23,27 +25,32 @@ jobs:
           cache: 'npm'
 
       - name: Install Dependencies
-        run: npm ci
+        run: |
+          npm ci
+          npm list
 
       - name: Build
-        run: npm run build
+        run: |
+          npm run build
+          echo "Build completed, checking dist contents:"
+          ls -R dist/
 
-      - name: Create .nojekyll and copy headers
+      - name: Setup deployment files
         run: |
           touch dist/.nojekyll
-          cp public/_headers dist/_headers
-
-      - name: List build output
-        run: |
-          echo "Contents of dist directory:"
-          ls -la dist
-          echo "Contents of dist/assets directory:"
-          ls -la dist/assets || echo "No assets directory found"
+          cp public/_headers dist/_headers || true
+          cp netlify.toml dist/netlify.toml || true
+          echo "/*    /index.html   200" > dist/_redirects
+          echo "Deployment files copied, checking dist contents again:"
+          ls -R dist/
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: dist
           branch: gh-pages
-          clean: true
-          single-commit: true 
+          clean-exclude: |
+            .nojekyll
+            _headers
+            _redirects
+            netlify.toml 
