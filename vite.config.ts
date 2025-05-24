@@ -19,6 +19,9 @@ export default defineConfig({
         manualChunks: undefined,
       },
     },
+    sourcemap: false,
+    minify: 'terser',
+    emptyOutDir: true
   },
   server: {
     port: 5173,
