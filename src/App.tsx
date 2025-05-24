@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
 import Home from './pages/Home';
 import About from './pages/About';
 import Education from './pages/Education';
@@ -24,6 +25,7 @@ function App() {
 
   return (
     <Router basename="/portfolio">
+      <ScrollToTop />
       <div className="min-h-screen flex flex-col">
         <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
         <main className="flex-grow">
