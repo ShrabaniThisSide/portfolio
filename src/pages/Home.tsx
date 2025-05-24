@@ -72,13 +72,13 @@ const Home: FC = () => {
             >
               <Link
                 to="/resume"
-                className="btn btn-primary flex items-center justify-center gap-2 text-lg hover:transform hover:translate-y-[-2px] transition-all"
+                className="px-6 py-3 bg-accent text-white rounded-lg font-medium flex items-center justify-center gap-2 text-lg hover:bg-accent/90 transform hover:-translate-y-0.5 transition-all"
               >
                 View Resume <FaArrowRight className="text-sm" />
               </Link>
               <Link
                 to="/about"
-                className="btn btn-outline flex items-center justify-center gap-2 text-lg hover:transform hover:translate-y-[-2px] transition-all"
+                className="px-6 py-3 border-2 border-accent text-accent rounded-lg font-medium flex items-center justify-center gap-2 text-lg hover:bg-accent hover:text-white transform hover:-translate-y-0.5 transition-all"
               >
                 Explore Work <FaArrowRight className="text-sm" />
               </Link>

@@ -23,7 +23,7 @@ function App() {
   }, [darkMode]);
 
   return (
-    <Router>
+    <Router basename="/portfolio">
       <div className="min-h-screen flex flex-col">
         <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
         <main className="flex-grow">
