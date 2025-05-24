@@ -13,23 +13,16 @@ export default defineConfig({
   },
   build: {
     outDir: 'dist',
-    assetsDir: 'assets',
+    emptyOutDir: true,
+    minify: 'esbuild',
     rollupOptions: {
-      output: {
-        assetFileNames: (assetInfo) => {
-          let extType = assetInfo.name.split('.')[1];
-          if (/png|jpe?g|svg|gif|tiff|bmp|ico/i.test(extType)) {
-            extType = 'img';
-          }
-          return `assets/${extType}/[name].[hash][extname]`;
-        },
-        chunkFileNames: 'assets/js/[name].[hash].js',
-        entryFileNames: 'assets/js/[name].[hash].js',
+      input: {
+        main: path.resolve(__dirname, 'index.html'),
       },
-    },
-    sourcemap: false,
-    minify: 'terser',
-    emptyOutDir: true
+      output: {
+        manualChunks: undefined
+      }
+    }
   },
   server: {
     port: 5173,
