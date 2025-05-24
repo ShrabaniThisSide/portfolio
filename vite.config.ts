@@ -18,7 +18,7 @@ export default defineConfig({
     sourcemap: true,
     rollupOptions: {
       input: {
-        app: path.resolve(__dirname, 'index.html'),
+        main: path.resolve(__dirname, 'index.html'),
       },
       output: {
         entryFileNames: 'assets/[name].[hash].js',
@@ -28,9 +28,7 @@ export default defineConfig({
           vendor: [
             'react',
             'react-dom',
-            'react-router-dom',
-            'framer-motion',
-            'lottie-react'
+            'react-router-dom'
           ]
         }
       }
