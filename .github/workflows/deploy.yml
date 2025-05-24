@@ -30,8 +30,13 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: List dist contents
+        run: ls -la dist
+
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: dist
-          branch: gh-pages 
+          branch: gh-pages
+          clean: true
+          single-commit: true 
