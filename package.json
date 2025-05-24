@@ -3,9 +3,11 @@
   "private": true,
   "version": "0.1.0",
   "type": "module",
+  "homepage": "https://shrabanithisside.github.io/portfolio/",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
+    "build:verify": "vite build && vite preview --port 8080",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
