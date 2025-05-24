@@ -28,8 +28,10 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Create .nojekyll
-        run: touch dist/.nojekyll
+      - name: Create .nojekyll and copy headers
+        run: |
+          touch dist/.nojekyll
+          cp public/_headers dist/_headers
 
       - name: List build output
         run: |
