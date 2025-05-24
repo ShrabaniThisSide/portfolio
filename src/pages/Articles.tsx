@@ -23,7 +23,7 @@ const Articles = () => {
 
   return (
     <div 
-      className="min-h-screen py-16 relative"
+      className="min-h-screen py-8 sm:py-12 lg:py-16 relative"
       style={{
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url(${newsBackground})`,
         backgroundSize: 'cover',
@@ -35,44 +35,44 @@ const Articles = () => {
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="max-w-4xl mx-auto bg-white/90 dark:bg-gray-900/90 backdrop-blur-md rounded-lg p-8 mb-12 shadow-xl"
+          className="max-w-4xl mx-auto bg-white/90 dark:bg-gray-900/90 backdrop-blur-md rounded-lg p-6 sm:p-8 mb-8 sm:mb-12 shadow-xl"
         >
-          <h1 className="text-4xl font-bold text-center mb-2 text-primary dark:text-white font-serif">
+          <h1 className="text-3xl sm:text-4xl font-bold text-center mb-2 text-primary dark:text-white font-serif">
             THE JOURNALIST
           </h1>
-          <p className="text-center text-sm text-gray-600 dark:text-gray-400 mb-16 font-serif">
+          <p className="text-center text-xs sm:text-sm text-gray-600 dark:text-gray-400 mb-8 sm:mb-16 font-serif">
             STORIES THAT MATTER • VOICES THAT COUNT
           </p>
-          <h2 className="text-3xl font-bold text-center mb-12 text-primary dark:text-white">
+          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12 text-primary dark:text-white">
             Featured Articles
           </h2>
 
-          <div className="grid gap-8">
+          <div className="space-y-6">
             {articles.map((article, index) => (
               <motion.div
                 key={article.title}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
-                className="newspaper-card rounded-lg p-6 bg-white/95 dark:bg-gray-800/95 backdrop-blur-sm shadow-lg border border-gray-200/50 dark:border-gray-600/30 hover:dark:border-gray-500/50 transition-colors"
+                className="newspaper-card rounded-lg p-4 sm:p-6 bg-white/95 dark:bg-gray-800/95 backdrop-blur-sm shadow-lg border border-gray-200/50 dark:border-gray-600/30 hover:dark:border-gray-500/50 transition-colors"
               >
-                <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
-                  <h2 className="text-2xl font-bold text-primary dark:text-white font-serif">
+                <div className="flex flex-col gap-4">
+                  <h2 className="text-xl sm:text-2xl font-bold text-primary dark:text-white font-serif">
                     {article.title}
                   </h2>
+                  <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 font-serif leading-relaxed">
+                    {article.description}
+                  </p>
+                  <a
+                    href={article.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-accent hover:text-accent-dark transition-colors font-serif text-sm sm:text-base"
+                  >
+                    Read Full Story
+                    <HiExternalLink className="ml-1 w-4 h-4" />
+                  </a>
                 </div>
-                <p className="text-gray-600 dark:text-gray-300 mb-4 font-serif leading-relaxed">
-                  {article.description}
-                </p>
-                <a
-                  href={article.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center text-accent hover:text-accent-dark transition-colors font-serif"
-                >
-                  Read Full Story
-                  <HiExternalLink className="ml-1 w-4 h-4" />
-                </a>
               </motion.div>
             ))}
           </div>
@@ -82,22 +82,22 @@ const Articles = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3 }}
-          className="max-w-4xl mx-auto bg-white/90 dark:bg-gray-900/90 backdrop-blur-md rounded-lg p-8 text-center shadow-xl"
+          className="max-w-4xl mx-auto bg-white/90 dark:bg-gray-900/90 backdrop-blur-md rounded-lg p-6 sm:p-8 text-center shadow-xl"
         >
-          <h3 className="text-xl font-bold text-primary dark:text-white mb-4 font-serif">
+          <h3 className="text-lg sm:text-xl font-bold text-primary dark:text-white mb-4 font-serif">
             More Stories Await
           </h3>
-          <p className="text-gray-600 dark:text-gray-300 mb-6 font-serif">
+          <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-6 font-serif">
             Discover my complete collection of articles and journalistic work on Muckrack.
           </p>
           <a
             href="https://muckrack.com/shrabani-chakraborty/articles"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center px-8 py-3 bg-accent text-white rounded-lg hover:bg-accent/90 transition-colors font-serif"
+            className="inline-flex items-center px-6 sm:px-8 py-2 sm:py-3 bg-accent text-white rounded-lg hover:bg-accent/90 transition-colors font-serif text-sm sm:text-base"
           >
             Visit My Muckrack Portfolio
-            <HiExternalLink className="ml-2 w-5 h-5" />
+            <HiExternalLink className="ml-2 w-4 sm:w-5 h-4 sm:h-5" />
           </a>
         </motion.div>
       </div>

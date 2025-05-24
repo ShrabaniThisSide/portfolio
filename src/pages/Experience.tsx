@@ -71,20 +71,35 @@ const Experience = () => {
     }
   ];
 
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  };
+
+  const item = {
+    hidden: { opacity: 0, y: 20 },
+    show: { opacity: 1, y: 0 }
+  };
+
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white via-blue-50 to-gray-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 text-gray-900 dark:text-white py-16 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gradient-to-b from-white via-blue-50 to-gray-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 text-gray-900 dark:text-white py-8 sm:py-12 lg:py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-12"
+          className="text-center mb-8 sm:mb-12"
         >
-          <h1 className="text-4xl font-bold mb-4 flex items-center justify-center text-gray-900 dark:text-white">
-            <FaBriefcase className="mr-4 text-5xl text-blue-500 dark:text-blue-400" />
+          <h1 className="text-3xl sm:text-4xl font-bold mb-4 flex items-center justify-center text-gray-900 dark:text-white">
+            <FaBriefcase className="mr-4 text-4xl sm:text-5xl text-blue-500 dark:text-blue-400" />
             Professional Experience
           </h1>
-          <div className="w-96 h-96 mx-auto mb-8 relative">
+          <div className="w-72 sm:w-96 h-72 sm:h-96 mx-auto mb-8 relative">
             <Lottie
               animationData={experienceAnimation}
               {...educationAnimationConfig}
@@ -92,49 +107,54 @@ const Experience = () => {
           </div>
         </motion.div>
 
-        <div className="space-y-6">
+        <motion.div
+          variants={container}
+          initial="hidden"
+          animate="show"
+          className="space-y-4 sm:space-y-6"
+        >
           {experiences.map((exp, index) => (
             <motion.div
               key={exp.company}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              variants={item}
+              className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-xl p-4 sm:p-6 shadow-lg hover:shadow-xl transition-shadow"
             >
               <Disclosure>
                 {({ open }) => (
-                  <div className="bg-white dark:bg-gray-800 bg-opacity-80 dark:bg-opacity-80 backdrop-blur-sm rounded-lg overflow-hidden border border-gray-100 dark:border-gray-700 hover:shadow-lg transition-all duration-300">
-                    <Disclosure.Button className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors">
-                      <div>
-                        <h3 className="text-xl font-bold text-gray-900 dark:text-white">
-                          {exp.role}
-                        </h3>
-                        <p className="text-blue-600 dark:text-blue-400">{exp.company}</p>
-                      </div>
-                      <div className="flex items-center">
-                        <span className="text-sm text-gray-600 dark:text-gray-400 mr-4">
-                          {exp.period}
-                        </span>
-                        <HiChevronDown
-                          className={`${
-                            open ? 'transform rotate-180' : ''
-                          } w-5 h-5 text-blue-500 dark:text-blue-400 transition-transform`}
-                        />
+                  <>
+                    <Disclosure.Button className="w-full text-left">
+                      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 sm:gap-4">
+                        <div className="flex-1">
+                          <h3 className="text-lg sm:text-xl font-semibold text-gray-900 dark:text-white">
+                            {exp.company}
+                          </h3>
+                          <p className="text-sm sm:text-base text-accent">{exp.role}</p>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <span className="text-xs sm:text-sm text-gray-500 dark:text-gray-400">
+                            {exp.period}
+                          </span>
+                          <HiChevronDown
+                            className={`w-5 h-5 text-gray-500 dark:text-gray-400 transition-transform ${
+                              open ? 'transform rotate-180' : ''
+                            }`}
+                          />
+                        </div>
                       </div>
                     </Disclosure.Button>
-
-                    <Disclosure.Panel className="px-6 py-4">
-                      <ul className="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300">
-                        {exp.description.map((item, i) => (
-                          <li key={i}>{item}</li>
+                    <Disclosure.Panel className="mt-4">
+                      <ul className="space-y-2 text-sm sm:text-base text-gray-600 dark:text-gray-300 list-disc list-inside">
+                        {exp.description.map((desc, i) => (
+                          <li key={i}>{desc}</li>
                         ))}
                       </ul>
                     </Disclosure.Panel>
-                  </div>
+                  </>
                 )}
               </Disclosure>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </div>
   );
