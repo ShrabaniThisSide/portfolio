@@ -18,7 +18,7 @@ const Navbar = ({ darkMode, setDarkMode }: NavbarProps) => {
     { path: '/education', label: 'Education' },
     { path: '/experience', label: 'Experience' },
     { path: '/articles', label: 'Articles' },
-    { path: '/podcasts', label: 'Podcasts' },
+    { path: '/podcasts', label: 'Podcasts & Interviews' },
     { path: '/resume', label: 'Resume' },
     { path: '/contact', label: 'Contact' },
   ];

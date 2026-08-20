@@ -16,21 +16,19 @@ interface Experience {
 const Experience = () => {
   const experiences: Experience[] = [
     {
-      company: '101REPORTERS',
-      role: 'Freelance journalist',
-      period: 'Apr 2024 - Current',
+      company: 'THOMSON REUTERS',
+      role: 'EMEA Sub Editor',
+      period: 'July 2025 - June 2026',
       description: [
-        'Involves projects addressing rural issues',
-        'Issues concerning the lower strata and economically backward section of the society'
+        'EMEA Sub Editor with experience editing and writing pharma stories and supporting end-to-end editorial production workflows.'
       ]
     },
     {
       company: 'INDIGO 91.9 FM',
       role: 'Executive Producer and Creative Writer | Consultant',
-      period: 'Sep 2024 - May 2025',
+      period: 'June 2024 - May 2025',
       description: [
-        'Curated and produced content for The Morning Show',
-        'Delivered voice-overs and conducted outdoor broadcasts',
+        'Curated and produced content for The Morning Show. Delivered voice-overs and conducted outdoor broadcasts',
         'Scripted and created jingles for various clients'
       ]
     },
@@ -48,7 +46,7 @@ const Experience = () => {
       role: 'Creative Producer (Programming)',
       period: 'May 2023 - Sept 2023',
       description: [
-        'Created ad copies and video scripts while managing production and outdoor broadcasts, including interviews with Bollywood and sports personalities'
+        'Created ad copies and video scripts while managing production and outdoor broadcasts, including interviews with Bollywood and sports personalities.'
       ]
     },
     {
@@ -56,8 +54,7 @@ const Experience = () => {
       role: 'Feature Writer (Intern)',
       period: 'April 2022 - May 2022',
       description: [
-        'Wrote feature stories for the City Express. Conducted interviews with startup founders, co-founders, and key team members',
-        'Managed page 2 of the City Express typically involved in curating content'
+        'Wrote feature stories for the City Express. Conducted interviews with startup founders, co-founders, and key team members.'
       ]
     },
     {
@@ -65,8 +62,7 @@ const Experience = () => {
       role: 'Reporter Intern',
       period: 'March 2022 - April 2022',
       description: [
-        'Wrote news articles adhering to The Hindu\'s editorial standards, conducting thorough research and fact-checking',
-        'Attended press conferences and participated in newsroom operations, including editorial meetings and story assignments'
+        'Wrote news articles adhering to The Hindu\'s editorial standards, conducting thorough research and fact-checking. Participated in newsroom operations, including editorial meetings and story assignments.'
       ]
     }
   ];

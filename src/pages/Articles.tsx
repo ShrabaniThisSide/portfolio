@@ -5,6 +5,11 @@ import newsBackground from '../assets/news.jpg';
 const Articles = () => {
   const articles = [
     {
+      title: "India sets the stage for US obesity price war - Reuters Breakingviews",
+      description: "India's rapidly growing obesity problem has created a new battleground for weight-loss drugmakers. Novo Nordisk's lower-priced Ozempic launch, following Eli Lilly's Mounjaro and Novo's Wegovy, offers a glimpse of the price competition that could intensify in the United States when key patents expire.",
+      link: "https://www.breakingviews.com/columns/considered-view/india-sets-stage-us-obesity-price-war-2026-01-09/"
+    },
+    {
       title: "Switch off- The New Indian Express",
       description: "Many professionals are complaining about burnout, loss of sleep and excessive use of screens which has taken a massive toll on their physical and mental health. Here's how some companies are dealing with digital fatigue. As work from home came to be called as the new normal, people across the globe were pushed to embrace a digital transformation.",
       link: "https://www.newindianexpress.com/cities/bengaluru/2022/may/09/switch-off-2451657.html"
