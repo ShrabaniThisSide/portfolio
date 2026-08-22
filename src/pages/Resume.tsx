@@ -78,6 +78,16 @@ const Resume = () => {
                     <HiEye className="w-5 h-5" />
                     <span>View CV</span>
                   </motion.a>
+                  <motion.a
+                    href="/portfolio/Shrabani_Portfolio.pdf"
+                    download="Shrabani_Chakraborty_Portfolio.pdf"
+                    className="inline-flex items-center justify-center px-6 py-3 border-2 border-gray-400 text-gray-700 dark:text-gray-200 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors space-x-2"
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                  >
+                    <HiDownload className="w-5 h-5" />
+                    <span>Download Portfolio</span>
+                  </motion.a>
                 </div>
               </div>
 

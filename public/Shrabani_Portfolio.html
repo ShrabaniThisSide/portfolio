@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shrabani Chakraborty | Journalism Portfolio</title>
+  <style>
+    @page { size: A4; margin: 0; }
+    :root { --ink: #17212b; --muted: #5d6b76; --blue: #176b87; --gold: #d49b4b; --paper: #f8f6f1; --line: #d9dfdf; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #dfe5e5; color: var(--ink); font-family: Georgia, 'Times New Roman', serif; font-size: 10.2pt; line-height: 1.42; }
+    .page { width: 210mm; min-height: 297mm; margin: 0 auto 12px; padding: 18mm 18mm 15mm; background: var(--paper); position: relative; overflow: hidden; page-break-after: always; }
+    .page:last-child { page-break-after: auto; }
+    .cover { background: linear-gradient(135deg, #122f3b 0%, #176b87 57%, #d49b4b 57%, #d49b4b 100%); color: white; display: flex; flex-direction: column; justify-content: space-between; }
+    .cover:after { content: ''; position: absolute; width: 160mm; height: 160mm; right: -80mm; bottom: -70mm; border: 1px solid rgba(255,255,255,.25); border-radius: 50%; box-shadow: 0 0 0 18mm rgba(255,255,255,.05), 0 0 0 36mm rgba(255,255,255,.04); }
+    .eyebrow { font: 700 9pt Arial, sans-serif; letter-spacing: 2.8px; text-transform: uppercase; color: var(--gold); }
+    .cover .eyebrow { color: #f5d39a; }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 { font-size: 46pt; line-height: .98; letter-spacing: -1px; margin: 18mm 0 8mm; max-width: 145mm; }
+    h2 { font-size: 23pt; line-height: 1.05; margin: 4mm 0 7mm; color: var(--blue); }
+    h3 { font: 700 11pt Arial, sans-serif; letter-spacing: .2px; margin: 0 0 1mm; }
+    .cover h2 { color: white; font: 400 20pt Georgia, serif; margin: 0; }
+    .cover-intro { max-width: 108mm; font-size: 15pt; line-height: 1.4; color: rgba(255,255,255,.9); }
+    .cover-meta { border-top: 1px solid rgba(255,255,255,.45); padding-top: 5mm; display: flex; justify-content: space-between; gap: 10mm; font: 9pt Arial, sans-serif; }
+    .cover-meta a { color: white; text-decoration: none; }
+    .masthead { display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 2px solid var(--blue); padding-bottom: 4mm; margin-bottom: 8mm; }
+    .masthead strong { font: 700 11pt Arial, sans-serif; letter-spacing: 2px; text-transform: uppercase; color: var(--blue); }
+    .masthead span { font: 9pt Arial, sans-serif; color: var(--muted); }
+    .profile-grid { display: grid; grid-template-columns: 58mm 1fr; gap: 10mm; align-items: start; }
+    .portrait { width: 58mm; height: 70mm; object-fit: cover; object-position: top; filter: saturate(.9); border: 5px solid white; box-shadow: 0 4px 18px rgba(23,33,43,.16); }
+    .lead { font-size: 14pt; line-height: 1.42; margin-bottom: 7mm; }
+    .rule { border: 0; border-top: 1px solid var(--line); margin: 6mm 0; }
+    .quote { border-left: 4px solid var(--gold); padding-left: 5mm; color: var(--muted); font-style: italic; font-size: 12pt; }
+    .facts { display: grid; grid-template-columns: 1fr 1fr; gap: 4mm; margin-top: 8mm; }
+    .fact { background: white; border-top: 3px solid var(--gold); padding: 4mm; }
+    .fact strong { display: block; font: 700 16pt Arial, sans-serif; color: var(--blue); }
+    .fact span { font: 8.5pt Arial, sans-serif; color: var(--muted); }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 10mm; }
+    .section { margin-bottom: 8mm; }
+    .section-title { display: flex; align-items: baseline; gap: 4mm; border-bottom: 1px solid var(--line); padding-bottom: 2mm; margin-bottom: 4mm; }
+    .section-title h2 { margin: 0; font-size: 19pt; }
+    .section-title small { font: 700 8pt Arial, sans-serif; color: var(--gold); text-transform: uppercase; letter-spacing: 1.2px; }
+    .job { position: relative; padding: 0 0 5mm 5mm; border-left: 2px solid var(--line); margin-left: 2mm; }
+    .job:before { content: ''; position: absolute; width: 7px; height: 7px; background: var(--gold); border-radius: 50%; left: -4.5px; top: 3px; }
+    .job + .job { margin-top: 3mm; }
+    .job .role { color: var(--blue); font-size: 10pt; }
+    .job .date { font: 8.4pt Arial, sans-serif; color: var(--muted); margin: 1mm 0 2mm; }
+    ul { margin: 1mm 0 0; padding-left: 4.5mm; }
+    li { margin-bottom: 1mm; }
+    .education { background: white; border-left: 4px solid var(--blue); padding: 4mm; margin-bottom: 4mm; }
+    .education .date { color: var(--muted); font: 8.5pt Arial, sans-serif; }
+    .pill-list { display: flex; flex-wrap: wrap; gap: 2mm; }
+    .pill { border: 1px solid #b9c9cc; padding: 1.5mm 2.5mm; color: var(--blue); background: #eef4f3; font: 8.5pt Arial, sans-serif; }
+    .article { background: white; padding: 4mm; margin-bottom: 4mm; border-bottom: 2px solid var(--gold); }
+    .article h3 { color: var(--blue); font: 700 12pt Georgia, serif; }
+    .article p { color: var(--muted); margin-bottom: 2mm; }
+    a { color: var(--blue); overflow-wrap: anywhere; }
+    .link { font: 8.5pt Arial, sans-serif; text-decoration: none; }
+    .media-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3mm; }
+    .media { background: white; padding: 3mm; min-height: 22mm; border-top: 3px solid var(--blue); }
+    .media h3 { font: 700 8.8pt Arial, sans-serif; line-height: 1.2; }
+    .media a { display: block; margin-top: 1mm; }
+    .closing { background: #122f3b; color: white; display: flex; flex-direction: column; justify-content: center; }
+    .closing h2 { color: white; font-size: 32pt; max-width: 125mm; }
+    .closing p { max-width: 120mm; color: rgba(255,255,255,.8); font-size: 13pt; }
+    .contact-box { border-top: 1px solid rgba(255,255,255,.45); border-bottom: 1px solid rgba(255,255,255,.45); padding: 6mm 0; margin-top: 12mm; max-width: 150mm; }
+    .contact-box a { color: #f5d39a; text-decoration: none; }
+    .footer { position: absolute; bottom: 8mm; left: 18mm; right: 18mm; display: flex; justify-content: space-between; font: 7.5pt Arial, sans-serif; color: var(--muted); }
+    .cover .footer, .closing .footer { color: rgba(255,255,255,.6); }
+    @media screen { .page { box-shadow: 0 5px 24px rgba(23,33,43,.16); } }
+    @media print { body { background: white; } .page { margin: 0; box-shadow: none; } a { color: inherit; } }
+  </style>
+</head>
+<body>
+  <section class="page cover">
+    <div><div class="eyebrow">Journalism · Audio · Visual Storytelling</div><h1>Shrabani<br>Chakraborty</h1><h2>Journalist &amp; Creative Producer</h2><p class="cover-intro">A versatile storyteller working across print, radio, digital media and video, with a sharp eye for people, ideas and stories that matter.</p></div>
+    <div class="cover-meta"><span>Portfolio · 2026</span><span><a href="mailto:shrabanichakraborty93384@gmail.com">shrabanichakraborty93384@gmail.com</a><br>+91 9348974393</span></div>
+    <div class="footer"><span>SHRABANI CHAKRABORTY</span><span>01</span></div>
+  </section>
+
+  <section class="page">
+    <div class="masthead"><strong>About the storyteller</strong><span>PROFILE / 02</span></div>
+    <div class="profile-grid"><img class="portrait" src="../src/assets/shrabani-profile.jpg" alt="Shrabani Chakraborty"><div><div class="eyebrow">A curious mind, a clear voice</div><p class="lead">A passionate journalist and creative producer with a keen eye for compelling narratives. Shrabani's media journey spans print journalism, radio production, digital storytelling and editorial production.</p><p>She specializes in crafting engaging content that resonates across platforms, combining thoughtful research with authentic storytelling and impactful communication.</p><p class="quote">“Stories that matter. Voices that count.”</p></div></div>
+    <div class="facts"><div class="fact"><strong>4+</strong><span>years across journalism, radio and media</span></div><div class="fact"><strong>5</strong><span>languages spoken or studied</span></div><div class="fact"><strong>4</strong><span>featured published articles</span></div><div class="fact"><strong>15+</strong><span>podcast and video pieces</span></div></div>
+    <hr class="rule">
+    <div class="two-col"><div class="section"><div class="section-title"><h2>Skills</h2><small>What I bring</small></div><div class="pill-list"><span class="pill">Writing &amp; Storytelling</span><span class="pill">Research &amp; Investigation</span><span class="pill">Interviewing</span><span class="pill">Video Production</span><span class="pill">On-Camera Presence</span><span class="pill">Multilingual Skills</span><span class="pill">Adaptability</span><span class="pill">Canva</span><span class="pill">Media Tools</span><span class="pill">Public Speaking</span></div></div><div class="section"><div class="section-title"><h2>Languages</h2><small>Communication</small></div><ul><li>English</li><li>Hindi</li><li>Bengali</li><li>Odia</li><li>Kannada <span class="link">(Beginner)</span></li></ul></div></div>
+    <div class="footer"><span>SHRABANI CHAKRABORTY · PORTFOLIO</span><span>02</span></div>
+  </section>
+
+  <section class="page">
+    <div class="masthead"><strong>Professional journey</strong><span>EXPERIENCE / 03</span></div>
+    <div class="section-title"><h2>Experience</h2><small>Editorial · Production · Reporting</small></div>
+    <div class="job"><h3>THOMSON REUTERS</h3><div class="role">EMEA Sub Editor</div><div class="date">July 2025 – June 2026 · Bengaluru, Karnataka</div><ul><li>Edited and wrote pharma stories while supporting end-to-end editorial production workflows.</li></ul></div>
+    <div class="job"><h3>INDIGO 91.9 FM</h3><div class="role">Executive Producer and Creative Writer | Consultant</div><div class="date">June 2024 – May 2025 · Bengaluru, Karnataka</div><ul><li>Curated and produced content for The Morning Show; delivered voice-overs and conducted outdoor broadcasts.</li><li>Scripted and created jingles for various clients.</li></ul></div>
+    <div class="job"><h3>ARCHETYPE</h3><div class="role">Associate Consultant</div><div class="date">January 2024 – June 2024 · Bengaluru, Karnataka</div><ul><li>Content writing, research, press releases and media pitches.</li><li>Worked with B2B technology clients including Kyndryl, Pegasystems and Genesys Cloud Services.</li></ul></div>
+    <div class="job"><h3>RED FM</h3><div class="role">Creative Producer (Programming)</div><div class="date">May 2023 – September 2023 · Bengaluru, Karnataka</div><ul><li>Created ad copies and video scripts while managing production and outdoor broadcasts, including interviews with Bollywood and sports personalities.</li></ul></div>
+    <div class="job"><h3>THE NEW INDIAN EXPRESS</h3><div class="role">Feature Writer (Intern)</div><div class="date">April 2022 – May 2022 · Bengaluru, Karnataka</div><ul><li>Wrote feature stories for the City Express and interviewed startup founders, co-founders and key team members.</li></ul></div>
+    <div class="job"><h3>THE HINDU</h3><div class="role">Reporter Intern</div><div class="date">March 2022 – April 2022 · Bengaluru, Karnataka</div><ul><li>Wrote news articles to The Hindu's editorial standards, conducting research and fact-checking; participated in editorial meetings and story assignments.</li></ul></div>
+    <div class="footer"><span>SHRABANI CHAKRABORTY · PORTFOLIO</span><span>03</span></div>
+  </section>
+
+  <section class="page">
+    <div class="masthead"><strong>Learning the craft</strong><span>EDUCATION / 04</span></div>
+    <div class="two-col"><div><div class="section-title"><h2>Education</h2><small>Academic foundation</small></div><div class="education"><h3>COMMITS</h3><p>PG Diploma in Journalism and Audio-Visual Communication</p><div class="date">September 2023 · Bengaluru, Karnataka · 80%</div></div><div class="education"><h3>ACHARYA INSTITUTE OF GRADUATE STUDIES</h3><p>B.A. in Triple Majors: Journalism, Psychology, Literature</p><div class="date">October 2021 · Bengaluru, Karnataka · CGPA: 8.3</div></div></div><div><div class="section-title"><h2>Coursework</h2><small>Core studies</small></div><ul><li>Reporting</li><li>Print Journalism</li><li>TV Journalism</li><li>Editing</li><li>Radio</li><li>Marketing</li><li>Proofreading</li></ul><div class="section-title" style="margin-top:12mm"><h2>Approach</h2><small>In practice</small></div><p>From a newsroom assignment to a live radio segment, Shrabani brings research, clarity and a human lens to every format.</p></div></div>
+    <hr class="rule">
+    <div class="section-title"><h2>Online presence</h2><small>Find the work</small></div>
+    <div class="two-col"><div><h3>LinkedIn</h3><a class="link" href="https://www.linkedin.com/in/shrabani-chakraborty-75437b1ab/">linkedin.com/in/shrabani-chakraborty-75437b1ab</a></div><div><h3>MuckRack bylines</h3><a class="link" href="https://muckrack.com/shrabani-chakraborty/articles">muckrack.com/shrabani-chakraborty/articles</a></div><div><h3>Instagram story reels</h3><a class="link" href="https://www.instagram.com/shrabani999/reels/">instagram.com/shrabani999/reels</a></div><div><h3>Email</h3><a class="link" href="mailto:shrabanichakraborty93384@gmail.com">shrabanichakraborty93384@gmail.com</a></div></div>
+    <div class="footer"><span>SHRABANI CHAKRABORTY · PORTFOLIO</span><span>04</span></div>
+  </section>
+
+  <section class="page">
+    <div class="masthead"><strong>Stories in print</strong><span>PUBLISHED WORK / 05</span></div>
+    <div class="section-title"><h2>Featured articles</h2><small>Read the work</small></div>
+    <div class="article"><h3>India sets the stage for US obesity price war · Reuters Breakingviews</h3><p>India's growing obesity problem has created a new battleground for weight-loss drugmakers. Novo Nordisk's lower-priced Ozempic launch offers a glimpse of the price competition that could intensify in the United States when key patents expire.</p><a class="link" href="https://www.breakingviews.com/columns/considered-view/india-sets-stage-us-obesity-price-war-2026-01-09/">Open article · breakingviews.com</a></div>
+    <div class="article"><h3>Switch off · The New Indian Express</h3><p>On burnout, sleep loss and screen overuse, and how companies are responding to digital fatigue in the era of work from home.</p><a class="link" href="https://www.newindianexpress.com/cities/bengaluru/2022/may/09/switch-off-2451657.html">Open article · newindianexpress.com</a></div>
+    <div class="article"><h3>Portion of Mylasandra lake makes way for road widening · The Hindu</h3><p>A report on a Bengaluru lake being used for road widening and the concerns raised by local residents.</p><a class="link" href="https://www.thehindu.com/news/national/karnataka/portion-of-mylasandra-lake-makes-way-for-road-widening/article65320939.ece">Open article · thehindu.com</a></div>
+    <div class="article"><h3>The pandemic took a huge toll on us · The Hindu</h3><p>How lockdowns affected children with Autism Spectrum Disorder and their caregivers through the closure of schools, parks and therapy services.</p><a class="link" href="https://www.thehindu.com/news/national/karnataka/the-pandemic-took-a-huge-toll-on-us/article65282774.ece">Open article · thehindu.com</a></div>
+    <div class="section-title" style="margin-top:9mm"><h2>Video story</h2><small>On location</small></div><p>Covered the Frazer Town Ramzan Food Festival 2023. More bylines and reporting work are available through the <a href="https://muckrack.com/shrabani-chakraborty/articles">MuckRack portfolio</a>.</p>
+    <div class="footer"><span>SHRABANI CHAKRABORTY · PORTFOLIO</span><span>05</span></div>
+  </section>
+
+  <section class="page">
+    <div class="masthead"><strong>Audio &amp; video</strong><span>MEDIA WORK / 06</span></div>
+    <div class="section-title"><h2>Video interviews</h2><small>Watch on YouTube</small></div>
+    <div class="media-grid">
+      <div class="media"><h3>Vox Pop on Mother's Day | Red FM Bengaluru</h3><a class="link" href="https://www.youtube.com/watch?v=wexQdSijmtE">youtube.com/watch?v=wexQdSijmtE</a></div>
+      <div class="media"><h3>This Resort Replaced Plastic With Bamboo | Sustainable Resort Kathmandu | IITM Bengaluru</h3><a class="link" href="https://www.youtube.com/watch?v=i7DB0AcrliM">youtube.com/watch?v=i7DB0AcrliM</a></div>
+      <div class="media"><h3>This Egypt Company Only Hires Certified Egyptologists | Luxury Egypt DMC | IITM Bengaluru</h3><a class="link" href="https://www.youtube.com/watch?v=vGPYXZyfefM">youtube.com/watch?v=vGPYXZyfefM</a></div>
+      <div class="media"><h3>Agents Are Just Starting to Add This State to Their Trips | IITM Bengaluru</h3><a class="link" href="https://www.youtube.com/watch?v=8icOASbYZaU">youtube.com/watch?v=8icOASbYZaU</a></div>
+      <div class="media"><h3>This Tool Turns an Email Into a Full Itinerary | AI Itinerary Builder | IITM Bengaluru</h3><a class="link" href="https://www.youtube.com/watch?v=DCGwnxDMxns">youtube.com/watch?v=DCGwnxDMxns</a></div>
+      <div class="media"><h3>Goa's Biggest Visitors Are Now From Within India | Goa Domestic Tourism | IITM Bengaluru</h3><a class="link" href="https://www.youtube.com/watch?v=h4WCqHq8F2w">youtube.com/watch?v=h4WCqHq8F2w</a></div>
+      <div class="media"><h3>This State Has India's Most Tigers | Madhya Pradesh Tourism | IITM Bengaluru</h3><a class="link" href="https://www.youtube.com/watch?v=nX-OEDFln-M">youtube.com/watch?v=nX-OEDFln-M</a></div>
+    </div>
+    <div class="section-title" style="margin-top:9mm"><h2>Podcast episodes</h2><small>Listen on YouTube</small></div>
+    <div class="media-grid">
+      <div class="media"><h3>Podcast Episode 1</h3><a class="link" href="https://www.youtube.com/watch?v=wpKIv5CFh6Q">youtube.com/watch?v=wpKIv5CFh6Q</a></div>
+      <div class="media"><h3>Podcast Episode 2</h3><a class="link" href="https://www.youtube.com/watch?v=AZak73Cu4Z4">youtube.com/watch?v=AZak73Cu4Z4</a></div>
+      <div class="media"><h3>Podcast Episode 3</h3><a class="link" href="https://www.youtube.com/watch?v=sqA3ek14LjU">youtube.com/watch?v=sqA3ek14LjU</a></div>
+      <div class="media"><h3>Podcast Episode 4</h3><a class="link" href="https://www.youtube.com/watch?v=W3JKAdm8484">youtube.com/watch?v=W3JKAdm8484</a></div>
+      <div class="media"><h3>Podcast Episode 5</h3><a class="link" href="https://www.youtube.com/watch?v=_-Av2pQ0yfk">youtube.com/watch?v=_-Av2pQ0yfk</a></div>
+      <div class="media"><h3>Podcast Episode 6</h3><a class="link" href="https://www.youtube.com/watch?v=hIcPhhg5Bcg">youtube.com/watch?v=hIcPhhg5Bcg</a></div>
+      <div class="media"><h3>Podcast Episode 7</h3><a class="link" href="https://www.youtube.com/watch?v=FMkyzmxPC58">youtube.com/watch?v=FMkyzmxPC58</a></div>
+      <div class="media"><h3>Podcast Episode 8</h3><a class="link" href="https://www.youtube.com/watch?v=wyKV87A99X8">youtube.com/watch?v=wyKV87A99X8</a></div>
+    </div>
+    <div class="footer"><span>SHRABANI CHAKRABORTY · PORTFOLIO</span><span>06</span></div>
+  </section>
+
+  <section class="page closing"><div class="eyebrow">Let’s make something worth hearing</div><h2>Good stories<br>stay with us.</h2><p>For editorial collaborations, creative production, interviews and media opportunities, get in touch.</p><div class="contact-box"><div><a href="mailto:shrabanichakraborty93384@gmail.com">shrabanichakraborty93384@gmail.com</a></div><div>+91 9348974393</div><div><a href="https://www.linkedin.com/in/shrabani-chakraborty-75437b1ab/">LinkedIn</a> · <a href="https://muckrack.com/shrabani-chakraborty/articles">MuckRack</a> · <a href="https://www.instagram.com/shrabani999/reels/">Instagram</a></div></div><div class="footer"><span>SHRABANI CHAKRABORTY · PORTFOLIO</span><span>07</span></div></section>
+</body>
+</html>
